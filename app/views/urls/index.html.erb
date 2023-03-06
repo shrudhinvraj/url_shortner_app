@@ -1,0 +1,7 @@
+<h2>Urls list</h2>
+<% @urls.each do |url| %>
+  <ul>
+    <li><%= link_to url.short_url, sanitize_url(url), target: '_blank' %></li>
+  </ul>
+<% end %>
+<%= link_to 'Add new URL', new_url_path %>
